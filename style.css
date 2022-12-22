@@ -1,0 +1,81 @@
+
+/* adaptando as dimensões para todos os navegadores tirando formatações padrão */
+:root {
+    --header: #cdb4db;
+    --background: #ffc8dd;
+}
+
+header {
+    text-align: center;
+    font-size: 2em;
+    background-color: var(--header);
+}
+
+/* reset */
+html, body {
+    background-color: var(--background);
+    width: 100%;
+    /* vw: largura máxima do navegador*/
+    max-width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background-color: var(--header);
+    width: 700px;
+    height: 350px;
+    padding:16px;
+}
+
+input, textarea{
+    width: 100%;
+    min-width: 300px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    resize: none;
+}
+
+.form-group, .form-textarea{
+    display: block;
+    max-width: 380px;
+}
+
+.row{
+    display:flex;
+    margin-top: 16px;
+}
+
+.form-group{
+    margin-right: 60px;
+}
+
+.form-textarea{
+    margin-top: 16px;
+}
+/* função */
+@media(max-width: 800px){
+
+    .form-group{
+        min-width: 100%;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    form{
+        height: 450px;
+    }
+}
